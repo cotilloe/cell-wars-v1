@@ -11,4 +11,4 @@
 ### TODOs - General
 |General
 |cause food to be sucked in when cell is close enough
-|reforming should be variable based upon reason for splitting (ie, longer for hitting bombs and quicker as you eat
+|reforming should be variable based upon reason for splitting (ie, longer for hitting bombs and quicker as you eat)
