@@ -1,5 +1,5 @@
 {
-  "name": "cell-wars",
+  "name": "agar-clone",
   "description": "A simple Agar.io clone",
   "scripts": {
     "build": "gulp build",
@@ -7,5 +7,5 @@
     "watch": "gulp watch",
     "test": "gulp test"
   },
-  "repository": "https://github.com/cotilloe/cell-wars-v1"
+  "repository": "https://github.com/huytd/agar.io-clone"
 }

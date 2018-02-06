@@ -1,7 +1,7 @@
 {
-  "name": "cell-wars",
+  "name": "agar-clone",
   "version": "1.0.0",
-  "description": "An enhanced Agar.io clone",
+  "description": "A simple Agar.io clone",
   "main": "server/server.js",
   "scripts": {
     "build": "gulp build",
@@ -11,12 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cotilloe/cell-wars-v1.git"
+    "url": "https://github.com/huytd/agar.io-clone.git"
   },
-  "author": "cotilloe",
+  "author": "Huy Tran",
   "license": "MIT",
   "contributors": [
-    "cotilloe <cotilloe@gmail.com> (https://github.com/cotilloe)",
     "abalabahaha <hi@abal.moe> (https://github.com/abalabahaha)",
     "Ariamiro <dossantosgusmaosavio@gmail.com> (https://github.com/Ariamiro)",
     "Bjarne Oeverli <bjarne.oeverli@gmail.com> (https://github.com/bjarneo)",
@@ -33,7 +32,7 @@
     "Saren Currie <saren@sarencurrie.com> (https://github.com/SarenCurrie)",
     "VILLERS Mickaël <mickael.villers@epitech.eu> (https://github.com/villers)",
     "wb9688 <wbertrums@gmail.com> (https://github.com/wb9688)"
-   ],
+  ],
   "dependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
