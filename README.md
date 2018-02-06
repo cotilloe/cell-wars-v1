@@ -2,19 +2,7 @@ Cell Wars
 =============
 **Built using huytd's source**
 
-[![GitHub Stars](https://img.shields.io/github/stars/huytd/agar.io-clone.svg)](https://github.com/huytd/agar.io-clone/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/huytd/agar.io-clone.svg)](https://github.com/huytd/agar.io-clone/issues)
-[![GitHub Wiki](https://img.shields.io/badge/project-wiki-ff69b4.svg)](https://github.com/huytd/agar.io-clone/wiki/Home)
-![Build Status](https://api.travis-ci.org/huytd/agar.io-clone.svg)
-[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](#live-demo) -
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/huytd/agar.io-clone?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 A simple but powerful Agar.IO clone built with socket.IO and HTML5 canvas on top of NodeJS.
-
-![Image](screenshot.png)
-
-## Live Demos
-An updated and live list of live demos can be found on the [Live Demos wiki page](https://github.com/huytd/agar.io-clone/wiki/Live-Demos).
 
 ---
 
