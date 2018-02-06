@@ -3,7 +3,7 @@
 <head>
     <!-- Meta Properties -->
     <meta charset="UTF-8">
-    <title>Open Agar</title>
+    <title>Cell Wars</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css" />
@@ -26,12 +26,12 @@
     </div>
     <div id="startMenuWrapper">
         <div id="startMenu">
-            <p>Open Agar</p>
-            <input type="text" tabindex="0" autofocus placeholder="Enter your name here" id="playerNameInput" maxlength="25" />
-            <b class="input-error">Nick must be alphanumeric characters only!</b>
+            <p>Cell Wars</p>
+            <input type="text" tabindex="0" autofocus placeholder="Enter your player name here" id="playerNameInput" maxlength="25" />
+            <b class="input-error">Name must be letters or numbers only!</b>
             <br />
             <a onclick="document.getElementById('spawn_cell').play();"><button id="startButton">Play</button></a>
-            <button id="spectateButton">Spectate</button>
+            <button id="spectateButton">Just Watch</button>
             <button id="settingsButton">Settings</button>
             <br />
             <div id="settings">
@@ -42,15 +42,15 @@
                     <br />
                     <label><input id="continuity" type="checkbox">Continue moving when mouse is off-screen</label>
                     <br />
-                    <label><input id="roundFood" type="checkbox" checked>Rounded food</label>
-                    <label><input id="darkMode" type="checkbox">Toggle Dark Mode</label>
+                  <!---   <label><input id="roundFood" type="checkbox" checked>Rounded food</label>
+                   <label><input id="darkMode" type="checkbox">Toggle Dark Mode</label> -->
                 </ul>
             </div>
             <div id="instructions">
-                <h3>Gameplay</h3>
+                <h3>Cell Wars</h3>
                 <ul>
                     <li>Move your mouse on the screen to move your character.</li>
-                    <li>Eat food and other players in order to grow your character (food respawns every time a player eats it).</li>
+                    <li>Eat pellets and other players in order to grow your cell (food respawns every time a player eats it).</li>
                     <li>A player's mass is the number of food particles eaten.</li>
                     <li>Objective: Try to get fat and eat other players.</li>
                 </ul>
