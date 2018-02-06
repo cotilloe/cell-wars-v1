@@ -1,5 +1,5 @@
 {
-  "name": "agar-clone",
+  "name": "cell-wars",
   "description": "A simple Agar.io clone",
   "scripts": {
     "build": "gulp build",
