@@ -27,9 +27,9 @@ module.exports = {
     disconnected: false,
     died: false,
     kicked: false,
-    continuity: true,
+    continuity: false,
     startPingTime: 0,
-    toggleMassState: 1,
+    toggleMassState: 0,
     backgroundColor: '#070707',
     lineColor: '#000000',
 };
