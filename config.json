@@ -4,7 +4,7 @@
     "logpath": "logger.php",
     "foodMass": 3,
     "fireFood": 20,
-    "limitSplit": 44,
+    "limitSplit": 24,
     "defaultPlayerMass": 20,
 	"virus": {
     "fill": "#aaaaaa",
@@ -29,7 +29,7 @@
     "foodUniformDisposition": true,
     "virusUniformDisposition": false,
     "newPlayerInitialPosition": "farthest",
-    "massLossRate": 2    ,
+    "massLossRate": 1    ,
     "minMassLoss": 50,
     "mergeTimer": 15,
     "sqlinfo":{
