@@ -32,4 +32,8 @@ module.exports = {
     toggleMassState: 1,
     backgroundColor: '#070707',
     lineColor: '#000000',
+    zoom: 1,
+    nzoom: 1,
+    scroll_level: 1,
+    render_lag: 1
 };
