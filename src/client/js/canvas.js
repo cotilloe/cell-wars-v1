@@ -132,23 +132,7 @@ class Canvas {
             global.target = this.parent.target;
     	}
     }
-// attempt to use mouse for split/feed
-     $('a').mousedown(function(e) {
-	    if (!gobal.mobile) {
-			var emitMe = null;
-		    if( (e.which == 1) ) {
-        	       emitMe = "2";
-    		}
-			if( (e.which == 3) ) {
-       			    e.preventDefault();
-			        emitMe = "1";
-    		}
-	    return emitMe;
-    });
-       this.parent.socket.emit(emitMe);
-       this.parent.reenviar = false;
-      }
-    
+
     // Chat command callback functions.
     keyInput(event) {
     	var key = event.which || event.keyCode;
