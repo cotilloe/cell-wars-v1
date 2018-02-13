@@ -4,7 +4,7 @@
     "logpath": "logger.php",
     "foodMass": 3,
     "fireFood": 20,
-    "limitSplit": 24,
+    "limitSplit": 1,
     "defaultPlayerMass": 20,
 	"virus": {
     "fill": "#aaaaaa",
@@ -14,18 +14,18 @@
             "from": 60,
             "to": 70
         },
-		"splitMass": 50
+		"splitMass": 20
 	},
     "gameWidth": 5000,
-    "gameHeight": 5000,
+    "gameHeight": 7500,
     "adminPass": "DEFAULT",
-    "gameMass": 20000,
+    "gameMass": 200000,
     "maxFood": 1000,
-    "maxVirus": 25,
+    "maxVirus": 16,
     "slowBase": 4.5,
     "logChat": 0,
     "networkUpdateFactor": 40,
-    "maxHeartbeatInterval": 15000,
+    "maxHeartbeatInterval": 150000000000000,
     "foodUniformDisposition": true,
     "virusUniformDisposition": false,
     "newPlayerInitialPosition": "farthest",
