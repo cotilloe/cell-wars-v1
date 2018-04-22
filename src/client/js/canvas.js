@@ -152,3 +152,4 @@ class Canvas {
 }
 
 module.exports = Canvas;
+//notes
