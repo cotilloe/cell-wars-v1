@@ -53,7 +53,7 @@ if(s.host !== "DEFAULT") {
 var initMassLog = util.log(c.defaultPlayerMass, c.slowBase);
 
 app.use(express.static(__dirname + '/../client'));
-
+// Creates food pellets
 function addFood(toAdd) {
     var radius = util.massToRadius(c.foodMass);
     while (toAdd--) {
@@ -69,7 +69,7 @@ function addFood(toAdd) {
         });
     }
 }
-
+// creates viruses
 function addVirus(toAdd) {
     while (toAdd--) {
         var mass = util.randomInRange(c.virus.defaultMass.from, c.virus.defaultMass.to, true);
@@ -93,7 +93,7 @@ function removeFood(toRem) {
         food.pop();
     }
 }
-
+//Player movement and merge times are figured here
 function movePlayer(player) {
     var x =0,y =0;
     for(var i=0; i<player.cells.length; i++)
