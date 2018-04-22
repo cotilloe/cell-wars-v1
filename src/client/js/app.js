@@ -601,7 +601,7 @@ function gameLoop() {
         }
     }
 }
-
+//notes
 window.addEventListener('resize', resize);
 
 function resize() {
