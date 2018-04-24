@@ -44,28 +44,12 @@ td {
 }
 </style>
 <body class="w3-black">
-<!-- XX -->
-<div id="gameAreaWrapper">
-        <div id="status"><span class="title">Leaderboard</span></div>
-        <div class="chatbox" id="chatbox">
-            <ul id="chatList" class="chat-list"></ul>
-            <input id="chatInput" type="text" class="chat-input" placeholder="Chat here..." maxlength="35" />
-        </div>
-        <div id="mobile">
-           <input type="image" id="split" class="split" src="img/split.png" alt="splitBtn">
-           <input type="image" id="feed" class="feed" src="img/feed.png" alt="feedBtn">
-        </div>
-        <canvas tabindex="1" id="cvs"></canvas>
-    </div>
 <!-- Top container -->
-<!-- XX id--><div id="startMenuWrapper">
-<!-- XX id--><div id="startMenu">
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
   <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-dark-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
- <!-- XX id--> <span class="w3-bar-item w3-right"><button id="startButton" class="w3-button w3-orange w3-text-white" style="font-size:1.4em;border:0px solid orange;border-radius:2px;margin-top:2px;padding:2px;text-shadow:1px 2px 3px black"><i class="fa fa-play fa-fw"></i>Play <span class="w3-text-orange" style="text-shadow:0px 0px 0px orange">.</span> </button>  </span>
- <!-- XX id--> <span class="w3-bar-item w3-right"><button id="spectateButton" class="w3-button w3-orange w3-text-white" style="font-size:1.4em;border:0px solid orange;border-radius:2px;margin-top:2px;margin-right:3px;padding:2px;text-shadow:1px 2px 3px black"><i class="fa fa-eye fa-fw"></i>Watch <span class="w3-text-orange" style="text-shadow:0px 0px 0px orange">.</span> </button>  </span>
+ <span class="w3-bar-item w3-right"><button id="toStartButton" class="w3-button w3-orange w3-text-white" style="font-size:1.4em;border:0px solid orange;border-radius:2px;margin-top:2px;padding:2px;text-shadow:1px 2px 3px black"><i class="fa fa-play fa-fw"></i>Play <span class="w3-text-orange" style="text-shadow:0px 0px 0px orange">.</span> </button>  </span>
+ <span class="w3-bar-item w3-right"><button id="toSpectateButton" class="w3-button w3-orange w3-text-white" style="font-size:1.4em;border:0px solid orange;border-radius:2px;margin-top:2px;margin-right:3px;padding:2px;text-shadow:1px 2px 3px black"><i class="fa fa-eye fa-fw"></i>Watch <span class="w3-text-orange" style="text-shadow:0px 0px 0px orange">.</span> </button>  </span>
 </div>
-<!-- XX --><b class="input-error">Name must be letters or numbers only!</b><!-- XX -->
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-collapse w3-text-white w3-black w3-animate-left" style="z-index:3;width:300px;scrollbar:no" id="mySidebar"><br>
   <div class="w3-container w3-row">
@@ -73,14 +57,12 @@ td {
       <img src="images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">
     </div>
     <div class="w3-col s8 w3-bar">
-      <span id="playerNameInput" style="font-size:18px;">USERNAME</span><br><!-- Need Script -->
+      <span id="playerNameInput" style="font-size:18px;">testuserGC</span><br><!-- Need Script -->
       <button class="viewlinks w3-bar-item w3-button" style="font-size:18px;" onclick="openView(event, 'messages')"><i class="fa fa-envelope"></i></button>
       <button class="viewlinks w3-bar-item w3-button" style="font-size:18px;" onclick="openView(event, 'account')"><i class="fa fa-user"></i></button>
       <button class="viewlinks w3-bar-item w3-button" style="font-size:18px;" onclick="openView(event, 'settings')"><i class="fa fa-cog"></i></button>
     </div>
   </div>
- <!-- XX--> </div>
-<!-- XX--> </div>
   <hr>
   <div class="w3-container">
     <h5 style="font-size:38px;text-align:center">Cryptosis</h5>
@@ -259,7 +241,7 @@ td {
             </div>
  
 <!-- Settings Div -->
-<div id="settings" class="view" style="display:hidden">
+<div id="settings" class="view">
                 <h2 style="font-size:46px; text-align:center">Settings</h2>
 				<p style="font-size:26px; text-align:center"> These are the settings for the game. To view/edit your account settings, please go t your Account Page.<br>Check the box next to the setting you wish to enable. To disable a setting, uncheck the box.</p> 
                 <ul style="font-size:26px; text-align:center">
