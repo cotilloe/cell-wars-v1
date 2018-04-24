@@ -26,7 +26,7 @@ class Canvas {
         global.canvas = this;
     }
 // Mouse key binding START -----------
-    
+   /* 
 
     (function() {
         'use strict';
@@ -52,6 +52,7 @@ class Canvas {
         //alert("mouse enabled");
     }
 )();
+*/
 // Mouse key binding END --------    
     
     // Function called when a key is pressed, will change direction if arrow key.
