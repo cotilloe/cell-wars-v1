@@ -67,6 +67,44 @@ div {
     font-size: 16.1px;
 }
 
+.view {
+	display: hidden !important;
+}
+
+.viewlinks {
+	font-size:inherit;
+}
+
+.view {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+h2 {
+	font-size:64px;
+}
+
+h3 {
+	font-size:54px;
+}
+
+h4 {
+	font-size:44px;
+}
+
+h5 {
+	font-size:34px;
+}
+
+p {
+	font-size:24px;
+}
+
 .chatbox {
 	color: white;
     position: absolute;
@@ -151,19 +189,20 @@ div {
 #playerNameInput {
     width: 100%;
     text-align: center;
-    padding: 10px;
-    border: solid 1px #1c85eemk
+    padding: 3px;
+    border: solid 1px #070707;
     transition: box-shadow 0.3s, border 0.3s;
     box-sizing: border-box;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
-    margin-bottom: 10px;
+	margin-left:30px;
+    margin-bottom: 2px;
     outline: none;
 }
 
 #playerNameInput:focus, #playerNameInput.focus {
-    border: solid 1px #CCCCCC;
+    border: solid 1px #000000;
     box-shadow: 0 0 3px 1px #DDDDDD;
 }
 
