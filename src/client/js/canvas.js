@@ -25,7 +25,33 @@ class Canvas {
         this.cv.parent = self;
         global.canvas = this;
     }
-
+// Mouse key binding START -----------
+    
+    $(
+    function() {
+        var feeddown = $.Event("keydown", { keyCode: 87}); //w button
+        var feedup = $.Event("keyup", { keyCode: 87}); //w button
+        var splitdown = $.Event("keydown", { keyCode: 32}); //space button
+        var splitup = $.Event("keyup", { keyCode: 32}); //space button
+        $(document).bind('mousedown', function(e) {
+            if( (e.which == 3) ){
+                $("body").trigger(feeddown);
+                $("body").trigger(feedup);
+                //console.log("feed");
+            }
+            else if( (e.which == 1) ){
+                $("body").trigger(splitdown);
+                $("body").trigger(splitup);
+                //console.log("split");
+            }
+        }).bind('contextmenu', function(e){
+            e.preventDefault();
+        });
+        //alert("mouse enabled");
+    }
+)();
+// Mouse key binding END --------    
+    
     // Function called when a key is pressed, will change direction if arrow key.
     directionDown(event) {
     	var key = event.which || event.keyCode;
