@@ -61,5 +61,41 @@
     <!-- JS -->
     <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="js/app.js"></script>
+    
+    
+    <script>
+//     var canvas = document.getElementById("gameAreaWrapper");   
+    $(
+    function() {
+        var feeddown = $.Event("keydown", { keyCode: 87}); //w button
+        var feedup = $.Event("keyup", { keyCode: 87}); //w button
+        var splitdown = $.Event("keydown", { keyCode: 32}); //space button
+        var splitup = $.Event("keyup", { keyCode: 32}); //space button
+        $(document).bind('mousedown', function(e) {
+            if( (e.which == 3) ){
+                $("body").trigger(feeddown);
+                $("body").trigger(feedup);
+                //console.log("feed");
+            }
+            else if( (e.which == 1) ){
+                $("body").trigger(splitdown);
+                $("body").trigger(splitup);
+                //console.log("split");
+            }
+        }).bind('contextmenu', function(e){
+            e.preventDefault();
+        });
+        //alert("mouse enabled");
+    }
+)();
+    
+    </script>
+    
+    
+    
+    
+    
+    
+    
 </body>
 </html>
