@@ -64,9 +64,10 @@
     
     
     <script>
-//     var canvas = document.getElementById("gameAreaWrapper");   
-    $(
-    function() {
+   
+     var canvas = document.getElementById("gameAreaWrapper");
+        canvas.addEventListener("mousedown", function(event) {
+    
         var feeddown = $.Event("keydown", { keyCode: 87}); //w button
         var feedup = $.Event("keyup", { keyCode: 87}); //w button
         var splitdown = $.Event("keydown", { keyCode: 32}); //space button
