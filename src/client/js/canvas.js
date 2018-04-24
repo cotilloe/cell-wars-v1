@@ -22,28 +22,32 @@ class Canvas {
         this.cv.addEventListener('keydown', this.directionDown, false);
         this.cv.addEventListener('touchstart', this.touchInput, false);
         this.cv.addEventListener('touchmove', this.touchInput, false);
+        // added event listener for mousedown
+        this.cv.addEventListener("mousedown", function(event) {
+            self.reenviar = true;
+            self.mouseBind(event);
+        }, false);
+        // end listener
         this.cv.parent = self;
         global.canvas = this;
     }
 // Mouse key binding START -----------
-   /* 
+  
 
-    (function() {
-        'use strict';
-        
-        var feeddown = $.Event("keydown", { keyCode: 87}); //w button
-        var feedup = $.Event("keyup", { keyCode: 87}); //w button
-        var splitdown = $.Event("keydown", { keyCode: 32}); //space button
-        var splitup = $.Event("keyup", { keyCode: 32}); //space button
+    mouseBind(event) {
+        var feeddown = global.KEY_FIREFOOD;
+        var feedup = global.KEY_FIREFOOD;
+        var splitdown = global.KEY_SPLIT;
+        var splitup = global.KEY_SPLIT;
         $(document).bind('mousedown', function(e) {
             if( (e.which == 3) ){
-                $("body").trigger(feeddown);
-                $("body").trigger(feedup);
+                $(cv).trigger(feeddown);
+                $(cv).trigger(feedup);
                 //console.log("feed");
             }
             else if( (e.which == 1) ){
-                $("body").trigger(splitdown);
-                $("body").trigger(splitup);
+                $(cv).trigger(splitdown);
+                $(cv).trigger(splitup);
                 //console.log("split");
             }
         }).bind('contextmenu', function(e){
@@ -52,7 +56,7 @@ class Canvas {
         //alert("mouse enabled");
     }
 )();
-*/
+
 // Mouse key binding END --------    
     
     // Function called when a key is pressed, will change direction if arrow key.
