@@ -23,10 +23,12 @@ class Canvas {
         this.cv.addEventListener('touchstart', this.touchInput, false);
         this.cv.addEventListener('touchmove', this.touchInput, false);
         // added event listener for mousedown
+        
         this.cv.addEventListener("mousedown", function(event) {
             self.reenviar = true;
             self.mouseBind(event);
         }, false);
+        
         // end listener
         this.cv.parent = self;
         global.canvas = this;
@@ -41,13 +43,13 @@ class Canvas {
         var splitup = global.KEY_SPLIT;
         $(document).bind('mousedown', function(e) {
             if( (e.which == 3) ){
-                $(cv).trigger(feeddown);
-                $(cv).trigger(feedup);
+                $('cvs').trigger(feeddown);
+                $('cvs').trigger(feedup);
                 //console.log("feed");
             }
             else if( (e.which == 1) ){
-                $(cv).trigger(splitdown);
-                $(cv).trigger(splitup);
+                $('cvs').trigger(splitdown);
+                $('cvs').trigger(splitup);
                 //console.log("split");
             }
         }).bind('contextmenu', function(e){
