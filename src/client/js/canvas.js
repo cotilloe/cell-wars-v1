@@ -23,18 +23,18 @@ class Canvas {
         this.cv.addEventListener('touchstart', this.touchInput, false);
         this.cv.addEventListener('touchmove', this.touchInput, false);
         // added event listener for mousedown
-        
+        /*
         this.cv.addEventListener("mousedown", function(event) {
             self.reenviar = true;
             self.mouseBind(event);
         }, false);
-        
+        */
         // end listener
         this.cv.parent = self;
         global.canvas = this;
     }
 // Mouse key binding START -----------
-  
+  /*
 
     mouseBind(event) {
         var feeddown = global.KEY_FIREFOOD;
@@ -58,7 +58,7 @@ class Canvas {
         //alert("mouse enabled");
     }
 )();
-
+*/
 // Mouse key binding END --------    
     
     // Function called when a key is pressed, will change direction if arrow key.
