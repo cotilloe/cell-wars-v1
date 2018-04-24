@@ -50,6 +50,14 @@ td {
   <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-dark-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
 <div id="startMenuWrapper">
 	<div id="startMenu">
+        <!-- ORIG Code -->
+         <input type="text" tabindex="0" autofocus placeholder="Enter your player name here" id="playerNameInput" maxlength="25" />
+            <b class="input-error">Name must be letters or numbers only!</b>
+            <br />
+           <center><a onclick="document.getElementById('spawn_cell').play();"><button id="startButton">Play</button></a></center>
+               <br />
+            <center><button id="spectateButton">Just Watch</button></center>
+        <!-- end orig code -->
 		  <span class="w3-bar-item w3-right"><a onclick="document.getElementById('spawn_cell').play();"><button id="startButton" class="viewlinks w3-button w3-orange w3-text-white" style="font-size:1.4em;border:0px solid orange;border-radius:2px;margin-top:2px;padding:2px;text-shadow:1px 2px 3px black"><i class="fa fa-play fa-fw"></i>Play 
 		  <span class="w3-text-orange" style="text-shadow:0px 0px 0px orange" onclick="openView(event, 'gameAreaWrapper')">.</span> </button> </a> </span>
 		  <span class="w3-bar-item w3-right"><button id="spectateButton" class="viewlinks w3-button w3-orange w3-text-white" style="font-size:1.4em;border:0px solid orange;border-radius:2px;margin-top:2px;margin-right:3px;padding:2px;text-shadow:1px 2px 3px black" onclick="openView(event, 'spectate')"><i class="fa fa-eye fa-fw"></i>Watch <span class="w3-text-orange" style="text-shadow:0px 0px 0px orange">.</span> </button>  </span>
@@ -63,7 +71,8 @@ td {
       <img src="images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">
     </div>
     <div class="w3-col s8 w3-bar">
-      <span id="playerNameInput" style="font-size:18px;">USERNAME</span><br><!-- Need Script -->
+        <!--- playerNameInput -->
+      <span id="pnm" style="font-size:18px;">USERNAME</span><br><!-- Need Script -->
       <button class="viewlinks w3-bar-item w3-button" style="font-size:18px;" onclick="openView(event, 'messages')"><i class="fa fa-envelope"></i></button>
       <button class="viewlinks w3-bar-item w3-button" style="font-size:18px;" onclick="openView(event, 'account')"><i class="fa fa-user"></i></button>
       <button class="viewlinks w3-bar-item w3-button" style="font-size:18px;" onclick="openView(event, 'settings')"><i class="fa fa-cog"></i></button>
