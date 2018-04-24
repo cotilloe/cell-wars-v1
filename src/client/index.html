@@ -1,18 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Meta Properties -->
-    <meta charset="UTF-8">
-    <title>Cell Wars</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=0.8, user-scalable=yes">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css" />
-    <!-- Audio -->
+<title>Cryptosis - Slowly Absorbing the World!</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=0.8, user-scalable=no">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kalam">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Audio -->
     <audio id="split_cell" src="audio/split.mp3"></audio>
     <audio id="spawn_cell" src="audio/spawn.mp3"></audio>
-</head>
-<body>
-    <div id="gameAreaWrapper">
+
+<style>
+html,body,h1,h2,h3,h4,h5,p,td,span,li,ul,ol,div,nav {font-family: "Kalam", sans-serif;}
+
+td {
+	font-size: 26px;
+	margin-left: 3px;
+	padding:2px;
+}
+
+.tdCells {
+	width:15%;
+	font-weight:bold;
+	color:orange;
+	text-align:center;
+	font-size:43px;
+	text-shadow:2px 3px 3px white;
+}
+
+.tdRt {
+	text-align:right;
+	
+}
+
+.tdTen {
+	width:4%
+}
+
+.whBk {
+	text-shadow: 1px 2px 2px black;
+}
+</style>
+<body class="w3-black">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-dark-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+<div id="startMenuWrapper">
+	<div id="startMenu">
+		<!-- <input type="text" tabindex="0" autofocus id="playerNameInput" /> -->
+			<!-- <script type="javascript">
+			function setText() {
+				  var u = document.getElementById('username').value;
+				  var s= document.getElementById(playerNameInput);
+				  s.innerHTML =u;
+
+				}    
+				window.onload=function() {
+				  setText();
+				}
+			</script> -->
+			<!-- <b class="input-error">Name must be letters or numbers only!</b> -->
+		  <span class="w3-bar-item w3-right"><a onclick="document.getElementById('spawn_cell').play();"><button id="startButton" class="viewlinks w3-button w3-orange w3-text-white" style="font-size:1.4em;border:0px solid orange;border-radius:2px;margin-top:2px;padding:2px;text-shadow:1px 2px 3px black"><i class="fa fa-play fa-fw"></i>Play 
+		  <span class="w3-text-orange" style="text-shadow:0px 0px 0px orange">.</span> </button> </a> </span>
+		  <span class="w3-bar-item w3-right"><button id="spectateButton" class="viewlinks w3-button w3-orange w3-text-white" style="font-size:1.4em;border:0px solid orange;border-radius:2px;margin-top:2px;margin-right:3px;padding:2px;text-shadow:1px 2px 3px black" onclick=""><i class="fa fa-eye fa-fw"></i>Watch <span class="w3-text-orange" style="text-shadow:0px 0px 0px orange">.</span> </button>  </span>
+		</div>
+	</div>
+</div>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-text-white w3-black w3-animate-left" style="z-index:3;width:300px;scrollbar:no" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+      <img src="images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">
+    </div>
+    <div class="w3-col s8 w3-bar">
+      <span id="playerNameInput" style="font-size:18px;">USERNAME</span><br><!-- Need Script -->
+      <button class="viewlinks w3-bar-item w3-button" style="font-size:18px;" onclick="openView(event, 'messages')"><i class="fa fa-envelope"></i></button>
+      <button class="viewlinks w3-bar-item w3-button" style="font-size:18px;" onclick="openView(event, 'account')"><i class="fa fa-user"></i></button>
+      <button class="viewlinks w3-bar-item w3-button" style="font-size:18px;" onclick="openView(event, 'settings')"><i class="fa fa-cog"></i></button>
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5 style="font-size:38px;text-align:center">Cryptosis</h5>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <button class="viewlinks z w3-bar-item w3-button w3-padding w3-orange w3-text-white" style="font-size:24px;" onclick="openView(event, 'dashboard')"><i class="fa fa-home fa-fw"></i>  Overview</button>
+    <button class="viewlinks z w3-bar-item w3-button w3-padding" style="font-size:24px;" onclick="openView(event, 'login')"><i class="fa fa-unlock fa-fw"></i>  Login/Register</button>
+    <button class="viewlinks z w3-bar-item w3-button w3-padding" style="font-size:24px;" onclick="openView(event, 'account')"><i class="fa fa-tachometer fa-fw"></i>  Account</button>
+    <button class="viewlinks z w3-bar-item w3-button w3-padding" style="font-size:24px;" onclick="openView(event, 'deposit')"><i class="fa fa-bank fa-fw"></i>  Deposit</button>
+    <button class="viewlinks z w3-bar-item w3-button w3-padding" style="font-size:24px;" onclick="openView(event, 'withdraw')"><i class="fa fa-bitcoin fa-fw"></i>  Withdraw</button>
+    <button class="viewlinks z w3-bar-item w3-button w3-padding" style="font-size:24px;" onclick="openView(event, 'refer')"><i class="fa fa-users fa-fw"></i>  Refer Friends</button>
+    <button class="viewlinks z w3-bar-item w3-button w3-padding" style="font-size:24px;" onclick="openView(event, 'instructions')"><i class="fa fa-question-circle fa-fw"></i>  FAQ</button>
+    <button class="viewlinks z w3-bar-item w3-button w3-padding" style="font-size:24px;" onclick="openView(event, 'support')"><i class="fa fa-comment-o fa-fw"></i>  Support</button>
+    <button class="viewlinks z w3-bar-item w3-button w3-padding" style="font-size:24px;" onclick="openView(event, 'settings')"><i class="fa fa-cog fa-fw"></i>  Settings</button><br><br>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- GAME PAGE -->
+<div id="gameAreaWrapper" class="view" style="display:hidden">
         <div id="status"><span class="title">Leaderboard</span></div>
         <div class="chatbox" id="chatbox">
             <ul id="chatList" class="chat-list"></ul>
@@ -24,43 +116,343 @@
         </div>
         <canvas tabindex="1" id="cvs"></canvas>
     </div>
-    <div id="startMenuWrapper">
-        <div id="startMenu">
-            <p>Cell Wars</p>
-            <input type="text" tabindex="0" autofocus placeholder="Enter your player name here" id="playerNameInput" maxlength="25" />
-            <b class="input-error">Name must be letters or numbers only!</b>
-            <br />
-           <center><a onclick="document.getElementById('spawn_cell').play();"><button id="startButton">Play</button></a></center>
-               <br />
-            <center><button id="spectateButton">Just Watch</button></center>
-            <button id="settingsButton">Settings</button>
-            <br />
-            <div id="settings">
-                <h3>Settings</h3>
-                <ul>
-                    <label><input id="visBord" type="checkbox">Show border</label>
-                    <label><input id="showMass" type="checkbox">Show mass</label>
-                    <br />
-                    <label><input id="continuity" type="checkbox">Continue moving when mouse is off-screen</label>
-                    <br />
-                  <label><input id="roundFood" type="checkbox" checked>Rounded food</label>
-                   <label><input id="darkMode" type="checkbox">Toggle Dark Mode</label>
-                </ul>
-            </div>
-            <div id="instructions">
-                <h3>Cell Wars</h3>
-                <ul>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h5 style="font-size:44px;"><b><i class="fa fa-circle w3-text-orange"></i> Cryptosis Game Menu</b></h5>
+  </header>
+  <div class="w3-row-padding w3-margin-bottom">
+  <!-- First Game Menu Box -->
+    <div class="w3-quarter">
+      <div class="w3-container w3-dark-gray">
+        <div class="w3-left"><img src="images/crown-icon-black.png" alt="King of the Hill" width="80"></div>
+        <div class="w3-right">
+          <h3 style="font-size:36px;margin-top:2px;text-shadow:2px 3px 3px orange">King of the Hill</h3> <p class="tdRt whBk" style="font-size:19px;margin-top:-19px"><!-- Need Script -->Current King: btcworker</p>
+        </div>
+        <div class="w3-clear"></div>
+		  <p style="font-size:20px;margin-top:5px;text-shadow:1px 2px 2px orange"> <!-- Need Script -->Players: 18  <button class="viewlinks w3-right w3-text-orange" style="font-size:24px;background-color:black;border:2px groove orange;border-radius:6px;margin-top:-7px" onclick="openView(event, 'gameAreaWrapper')"><i class="fa fa-play fa-fw"></i>Play</button></p>
+      </div>
+    </div>
+<!-- Second Game menu Box -->
+    <div class="w3-quarter">
+      <div class="w3-container w3-dark-gray">
+        <div class="w3-left"><img src="images/ffa-icon-black.png" alt="Faucet" width="80"></div>
+        <div class="w3-right">
+          <h3 style="font-size:36px;margin-top:2px;text-shadow:2px 3px 3px orange">Faucet</h3> <p class="tdRt whBk" style="font-size:19px;margin-top:-19px"><!-- Need Script -->Time: 02:13</p>
+        </div>
+        <div class="w3-clear"></div>
+        <p style="font-size:20px;margin-top:5px;text-shadow:1px 2px 2px orange"><!-- Need Script -->Players: 14 <button class="viewlinks w3-right w3-text-orange" style="font-size:24px;background-color:black;border:2px groove orange;border-radius:6px;margin-top:-7px" onclick="openView(event, 'gameAreaWrapper')"><i class="fa fa-play fa-fw"></i>Play</button></p>
+      </div>
+    </div>
+<!-- Third Game menu Box -->
+    <div class="w3-quarter">
+      <div class="w3-container w3-dark-gray">
+        <div class="w3-left"><img src="images/coins-icon-black.png" alt="Faucet" width="80" style="margin-top:4px"></div>
+        <div class="w3-right">
+          <h3 style="font-size:36px;margin-top:2px;text-shadow:2px 3px 3px orange">Paid Game</h3> <p class="tdRt whBk" style="font-size:19px;margin-top:-19px"><!-- Need Script --><span>Time: 02:13</p>
+        </div>
+        <div class="w3-clear"></div>
+        <p style="font-size:20px;margin-top:5px;text-shadow:1px 2px 2px orange"> <!-- Need Script -->Players: 6  <button class="viewlinks w3-right w3-text-orange" style="font-size:24px;background-color:black;border:2px groove orange;border-radius:6px;margin-top:-7px" onclick="openView(event, 'gameAreaWrapper')"><i class="fa fa-play fa-fw"></i>Play</button></p>
+      </div>
+    </div>
+	<!-- Fourth Game menu Box -->
+    <div class="w3-quarter">
+      <div class="w3-container w3-dark-gray">
+        <div class="w3-left"><img src="images/ffa-icon-black.png" alt="Faucet" width="80"></div>
+        <div class="w3-right">
+          <h3 style="font-size:36px;margin-top:2px;text-shadow:2px 3px 3px orange">Practice Arena</h3> <p class="tdRt whBk" style="font-size:19px;margin-top:-19px"><!-- Need Script -->Mode: Open</p>
+        </div>
+        <div class="w3-clear"></div>
+        <p style="font-size:20px;margin-top:5px;text-shadow:1px 2px 2px orange"> <!-- Need Script -->Players: 11  <button class="viewlinks w3-right w3-text-orange" style="font-size:24px;background-color:black;border:2px groove orange;border-radius:6px;margin-top:-7px" onclick="openView(event, 'gameAreaWrapper')"><i class="fa fa-play fa-fw"></i>Play</button></p>
+      </div>
+    </div>
+  </div>
+<!-- End Game Menu -->
+
+
+  <!-- BEGIN Dashboard Div -->
+<div id="dashboard" class="view" style="display:hidden">
+  <div class="w3-panel">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-third">
+	   <h5 style="font-size:44px;"><b><i class="fa fa-dashboard w3-text-orange"></i> Dashboard</b></h5>
+        <h5 style="font-size:27px;">Welcome to Cryptosis!</h5>
+        <p style="font-size:20px;">The goal is to float around eating pellets and other players, while you avoid being eaten yourself. Get as large as possible to win.<br><br>
+		Play King of the Hill and get rewarded in Bitcoin for being the King or Play the faucet to get some free Bitcoin just for playing.
+		</p>
+      </div>
+      <div class="w3-twothird">
+        <h5 style="font-size:44px;"><b><i class="fa fa-table w3-text-orange"></i> Your Player Stats</b></h5>
+		
+        <table style="margin-left:26px">
+        <tr>
+			<td>Total Games Played:</td>
+			<td class="tdRt"><!-- Need script -->244</td>
+			<td class="tdCells">C</td>
+			<td>Total Bitcoin Earned:</td>
+			<td><i class="fa fa-bitcoin w3-text-orange"></i><!-- Need script --> 0.02548711</td>
+        </tr>
+        <tr>
+			<td>KotH Games Played:</td>
+			<td class="tdRt"><!-- Need script -->80</td>
+			<td class="tdCells">R</td>
+			<td>Bitcoin Earned in KotH:</td>
+			<td><i class="fa fa-bitcoin w3-text-orange"></i><!-- Need script --> 0.00048711</td>
+        </tr>
+        <tr>
+			<td>Faucet Games Played<span style="color:orange;font-weight:bold">*</span>:</td>
+			<td class="tdRt"><!-- Need script -->144</td>
+			<td class="tdCells">Y</td>
+			<td>Bitcoin Earned in Faucet:</td>
+			<td><i class="fa fa-bitcoin w3-text-orange"></i><!-- Need script --> 0.00048711</td>
+        </tr>
+        <tr>
+			<td>Paid Games Played:</td>
+			<td class="tdRt"><!-- Need script -->20</td>
+			<td class="tdCells">P</td>
+			<td>Paid Games Total Won:</td>
+			<td><i class="fa fa-bitcoin w3-text-orange"></i><!-- Need script --> 0.01000144</td>
+        </tr>
+		<tr>
+			<td>Total Mass Gained:</td>
+			<td class="tdRt"><!-- Need script -->2,204,876</td>
+			<td class="tdCells">T</td>
+			<td>All-Time Average Mass:</td>
+			<td class="tdRt"><!-- Need script --> 2,566</td>
+        </tr>
+		<tr>
+			<td>Largest Game Mass:</td>
+			<td class="tdRt"><!-- Need script -->34,211</td>
+			<td class="tdCells">O</td>
+			<td>Total Players Eaten<span style="color:orange;font-weight:bold">**</span>:</td>
+			<td class="tdRt"><!-- Need script --> 7,259</td>
+        </tr>
+		<tr>
+			<td>Time as King (%):</td>
+			<td class="tdRt"><!-- Need script -->1.32%</td>
+			<td class="tdCells">S</td>
+			<td>Total Time as King:</td>
+			<td class="tdRt"><!-- Need script --> 00:13:26</td>
+        </tr>
+		<tr>
+			<td>Mass Gain Rank:</td>
+			<td class="tdRt">24,221<!-- Need script --></td>
+			<td class="tdCells">I</td>
+			<td>Total Practice Time:</td>
+			<td class="tdRt"><!-- Need script -->03:22:47</td>
+        </tr>
+		<tr>
+			<td>Most Used Skin:</td>
+			<td class="tdRt"><!-- Need script -->Peace Sign</td>
+			<td class="tdCells">S</td>
+			<td>Member Since:</td>
+			<td class="tdRt"><!-- Need script -->22 April 2018</td>
+        </tr>
+        </table>
+		<p><span style="color:orange;font-weight:bold">*</span> Only includes games where player was actively in-game at the time the faucet timer reached '0'.</p>
+		<p><span style="color:orange;font-weight:bold">**</span> Only when player was totally eaten and sent back to dashboard screen. Does not include times when any pieces of player were not eaten.</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5>h5</h5>
+    <p>p1</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-center w3-padding w3-green" style="width:25%">+25%</div>
+    </div>
+
+    <p>p2</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-center w3-padding w3-orange" style="width:50%">50%</div>
+    </div>
+
+    <p>p3</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-center w3-padding w3-red" style="width:75%">75%</div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="w3-container">
+    <h5>h5</h5>
+    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+      <tr>
+        <td>td</td>
+        <td>td</td>
+      </tr>
+      <tr>
+        <td>td</td>
+        <td>td</td>
+      </tr>
+      <tr>
+        <td>td</td>
+        <td>td</td>
+      </tr>
+      <tr>
+        <td>td</td>
+        <td>td</td>
+      </tr>
+      <tr>
+        <td>td</td>
+        <td>td</td>
+      </tr>
+      <tr>
+        <td>td</td>
+        <td>td</td>
+      </tr>
+    </table><br>
+    <button class="w3-button w3-dark-grey">Button  <i class="fa fa-arrow-right"></i></button>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5>h5</h5>
+    <ul class="w3-ul w3-card-4 w3-white">
+      <li class="w3-padding-16">
+        <img src="/w3images/avatar2.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
+        <span class="w3-xlarge">w3-xlarge</span><br>
+      </li>
+      <li class="w3-padding-16">
+        <img src="/w3images/avatar5.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
+        <span class="w3-xlarge">w3-xlarge</span><br>
+      </li>
+      <li class="w3-padding-16">
+        <img src="/w3images/avatar6.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
+        <span class="w3-xlarge">w3-xlarge</span><br>
+      </li>
+    </ul>
+  </div>
+  <hr>
+
+  <div class="w3-container">
+    <h5>H5</h5>
+    <div class="w3-row">
+      <div class="w3-col m2 text-center">
+        <img class="w3-circle" src="/w3images/avatar3.png" style="width:96px;height:96px">
+      </div>
+      <div class="w3-col m10 w3-container">
+        <h4>h4 <span class="w3-opacity w3-medium">w3-opacity w3-medium</span></h4>
+        <p>p1</p><br>
+      </div>
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-col m2 text-center">
+        <img class="w3-circle" src="/w3images/avatar1.png" style="width:96px;height:96px">
+      </div>
+      <div class="w3-col m10 w3-container">
+        <h4>H4 <span class="w3-opacity w3-medium">w3-opacity w3-medium</span></h4>
+        <p>p1</p><br>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="w3-container w3-dark-grey w3-padding-32">
+    <div class="w3-row">
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-green">w3-bottombar w3-border-green</h5>
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+      </div>
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-red">w3-bottombar w3-border-red</h5>
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+      </div>
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-orange">H5 w3-bottombar w3-border-orange</h5>
+        <p>P1</p>
+        <p>P2</p>
+        <p>P3</p>
+        <p>P4</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="instructions">
+                <h3 style="font-size:46px; text-align:center">Cryptosis Game Play Instructions</h3>
+				<p style="font-size:46px"></p>
+                <ul style="font-size:26px">
                     <li>Move your mouse on the screen to move your character.</li>
                     <li>Eat pellets and other players in order to grow your cell (food respawns every time a player eats it).</li>
                     <li>A player's mass is the number of pellets eaten pus the total mass of other players eaten.</li>
                     <li>Objective: Try to become the biggest cell in the game.</li>
                 </ul>
             </div>
-        </div>
-    </div>
-    <!-- JS -->
-    <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="js/app.js"></script>
-    
+ 
+<!-- Settings Div -->
+<div id="settings" class="view" style="display:hidden">
+                <h2 style="font-size:46px; text-align:center">Settings</h2>
+				<p style="font-size:26px; text-align:center"> These are the settings for the game. To view/edit your account settings, please go t your Account Page.<br>Check the box next to the setting you wish to enable. To disable a setting, uncheck the box.</p> 
+                <ul style="font-size:26px; text-align:center">
+                    <label><input id="visBord" type="checkbox"> Show Border</label>&nbsp;&nbsp;&nbsp;
+                    <label><input id="showMass" type="checkbox"> Show Mass</label>&nbsp;&nbsp;&nbsp;
+                    <label><input id="continuity" type="checkbox"> Continue Moving When Mouse is Off-Screen</label>&nbsp;&nbsp;&nbsp;
+                    <label><input id="roundFood" type="checkbox" checked> Rounded Food</label>&nbsp;&nbsp;&nbsp;
+                    <label><input id="darkMode" type="checkbox"> Toggle Dark Mode</label>
+                </ul>
+            </div>
+  <!-- End page content -->
+   <!-- Footer -->
+  <footer class="w3-container w3-padding-16 w3-black w3-text-white">
+    <h4>FOOTER</h4><center><p> Facebook ~ Twitter ~ YouTube</p>
+    <p><center>&copy; 2018 Cryptosis. All Righta Reserved.</p></center>
+  </footer>
+</div>
+
+<script>
+function openView(evt, viewName) {
+    var i, view, viewlinks;
+    view = document.getElementsByClassName("view");
+    for (i = 0; i < view.length; i++) {
+        view[i].style.display = "none";
+    }
+    viewlinks = document.getElementsByClassName("viewlinks");
+    for (i = 0; i < viewlinks.length; i++) {
+        viewlinks[i].className = viewlinks[i].className.replace(" active", "");
+    }
+    document.getElementById(viewName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+// Get the element with id="dashboard" and click on it
+document.getElementById("dashboard").click();
+</script>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+
+<script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="js/app.js"></script>
+
 </body>
 </html>
