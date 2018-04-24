@@ -27,8 +27,10 @@ class Canvas {
     }
 // Mouse key binding START -----------
     
-    $(
-    function() {
+
+    (function() {
+        'use strict';
+        
         var feeddown = $.Event("keydown", { keyCode: 87}); //w button
         var feedup = $.Event("keyup", { keyCode: 87}); //w button
         var splitdown = $.Event("keydown", { keyCode: 32}); //space button
