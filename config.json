@@ -3,16 +3,16 @@
     "port": 3000,
     "logpath": "logger.php",
     "foodMass": 3,
-    "fireFood": 20,
-    "limitSplit": 1,
-    "defaultPlayerMass": 20,
+    "fireFood": 3,
+    "limitSplit": 12,
+    "defaultPlayerMass": 40,
 	"virus": {
     "fill": "#aaaaaa",
   	"stroke": "#a6a6a6",
 		"strokeWidth": 10,
 		"defaultMass": {
-            "from": 60,
-            "to": 70
+            "from": 50,
+            "to": 50
         },
 		"splitMass": 20
 	},
@@ -26,12 +26,12 @@
     "logChat": 0,
     "networkUpdateFactor": 40,
     "maxHeartbeatInterval": 150000000000000,
-    "foodUniformDisposition": true,
+    "foodUniformDisposition": false,
     "virusUniformDisposition": false,
     "newPlayerInitialPosition": "farthest",
     "massLossRate": 1    ,
     "minMassLoss": 50,
-    "mergeTimer": 15,
+    "mergeTimer": 9,
     "sqlinfo":{
       "connectionLimit": 100,
       "host": "DEFAULT",
