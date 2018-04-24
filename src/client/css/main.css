@@ -1,10 +1,10 @@
-* {
+ * {
     font-family: sans-serif;
     font-size: 14px;
 }
 
 html, body {
-    background-color: #222;
+    background-color: #000000;
 	overflow:hidden;
 }
 
@@ -68,7 +68,7 @@ div {
 }
 
 .view {
-	display: hidden !important;
+	display: hidden;
 }
 
 .viewlinks {
@@ -163,7 +163,7 @@ p {
     border-top: 1px solid #1c85ee;
     outline: none;
 }
-
+/*
 #startMenu {
 	color:white;
     position: relative;
@@ -183,8 +183,8 @@ p {
     text-align: center;
     font-size: x-large;
     font-weight: bold;
-	
 }
+
 
 #playerNameInput {
     width: 100%;
@@ -238,7 +238,13 @@ p {
     box-shadow: none;
 	overflow:hidden;
 }
+*/
+#spectateButton:active, #spectateButton:hover,
+#startButton:active, #startButton:hover {
+	overflow:hidden;
+}
 
+/*
 #settingsButton {
     position: relative;
     margin: auto;
@@ -270,7 +276,11 @@ p {
     box-shadow: none;
 	overflow:hidden;
 }
-
+*/
+#settingsButton:active, #settingsButton:hover {
+	overflow:hidden;
+}
+/*
 #settings, #startMenuWrapper {
     -webkit-transition: max-height 1s;
     -moz-transition: max-height 1s;
@@ -295,6 +305,10 @@ p {
     padding: 10px;
     margin-top: 0;
 }
+*/
+#startMenu h3, #settings, #startMenuWrapper {
+	overflow:hidden;
+}
 
 #startMenu .input-error {
     color: red;
@@ -302,11 +316,11 @@ p {
     font-size : 12px;
 	overflow: hidden;
 }
-
+/*
 #startMenuWrapper {
     z-index: 2;
 }
-
+*/
 #gameAreaWrapper {
     position: absolute !important;
     top: 0;
