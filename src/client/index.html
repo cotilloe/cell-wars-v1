@@ -111,13 +111,15 @@ html, body {
 .w3-sidebar{height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto}
 .w3-container:after,.w3-container:before{content:"";display:table;clear:both}
 .w3-container{padding:0.01em 16px}
+.w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,
+.w3-cell-row:before,.w3-cell-row:after,.w3-clear:after,.w3-clear:before,.w3-bar:before,.w3-bar:after{content:"";display:table;clear:both}
+.w3-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{float:left;width:100%}
 .w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before{content:"";display:table;clear:both}
 .w3-col{padding:0 8px}
 .w3-col.s4{width:33.33333%}
 .w3-col.s8{width:66.66666%}
 .w3-circle{border-radius:50%}
 .w3-margin-right{margin-right:16px!important}
-.w3-margin-bottom{margin-bottom:16px!important}
 .w3-bar-item{text-align:center}
 .w3-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
 .w3-padding-16{padding-top:16px!important;padding-bottom:16px!important}
@@ -192,7 +194,7 @@ html, body {
   <header class="w3-container" style="padding-top:22px">
     <h5 style="font-size:44px;"><b><i class="fa fa-circle w3-text-orange"></i> Cryptosis Game Menu</b></h5>
   </header>
-  <div class="w3-row-padding w3-margin-bottom">
+  <div class="w3-row-padding">
   <!-- First Game Menu Box -->
     <div class="w3-quarter">
       <div class="w3-container w3-dark-gray">
