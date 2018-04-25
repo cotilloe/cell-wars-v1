@@ -67,43 +67,6 @@ div {
     font-size: 16.1px;
 }
 
-.view {
-	display: hidden;
-}
-
-.viewlinks {
-	font-size:inherit;
-}
-
-.view {
-    animation: fadeEffect 1s; /* Fading effect takes 1 second */
-}
-
-/* Go from zero to full opacity */
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-h2 {
-	font-size:64px;
-}
-
-h3 {
-	font-size:54px;
-}
-
-h4 {
-	font-size:44px;
-}
-
-h5 {
-	font-size:34px;
-}
-
-p {
-	font-size:24px;
-}
 
 .chatbox {
 	color: white;
