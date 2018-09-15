@@ -153,6 +153,24 @@ $( "#split" ).click(function() {
     window.canvas.reenviar = false;
 });
 
+  $('#cvs').mousedown(function(event) {
+    switch (event.which) {
+        case 1:
+            var action = '2';
+            break;
+        case 2:
+            var action = '0';
+            break;
+        case 3:
+            var action = '1';
+			break;
+        default:
+            var action = '0';
+    }
+	socket.emit(action);
+    window.canvas.reenviar = false;
+});
+
 // socket stuff.
 function setupSocket(socket) {
     // Handle ping.
