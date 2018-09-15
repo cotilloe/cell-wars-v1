@@ -153,24 +153,21 @@ $( "#split" ).click(function() {
     window.canvas.reenviar = false;
 });
 
-  $('#cvs').mousedown(function(event) {
-    switch (event.which) {
-        case 1:
-            var action = '2';
-            break;
-        case 2:
-            var action = '0';
-            break;
-        case 3:
-            var action = '1';
-			break;
-        default:
-            var action = '0';
-    }
-	socket.emit(action);
-    window.canvas.reenviar = false;
-});
 
+  $('#cvs').mousedown(function(event) {
+    var action = event.which;
+       if (action === 3 && this.parent.reenviar) {
+            socket.emit('1');
+            window.canvas.reenviar = false;
+        }
+        else if (action === 1 && this.parent.reenviar) {
+            socket.emit('2');
+            window.canvas.reenviar = false;
+        }
+      else if (action === 0) {
+        console.log("Scroll Wheel presses have no fuctionality");   
+      }
+});
 // socket stuff.
 function setupSocket(socket) {
     // Handle ping.
