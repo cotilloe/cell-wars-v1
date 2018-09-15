@@ -136,19 +136,7 @@ class Canvas {
             global.target = this.parent.target;
     	}
     }
- // Mouse Testing    - 9/15/2018
-    $('#cvs').mousedown(function(event) {
-            var mouseSplit = global.KEY_SPLIT;
-            var mouseFire = global.KEY_FIREFOOD;
-            switch (event.which) {
-                case 1: 
-                    mouseSplit;
-                    break;
-                case 3:
-                    mouseFire;
-                    break;
-            }
-    }
+
 // Prevent default right click on mouse  -  9/15/2018
     $(function() {
             $(this).bind("contextmenu", function(e) {
