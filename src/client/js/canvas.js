@@ -137,13 +137,6 @@ class Canvas {
     	}
     }
 
-// Prevent default right click on mouse  -  9/15/2018
-    $(function() {
-            $(this).bind("contextmenu", function(e) {
-                e.preventDefault();
-            });
-        }); 
-
     // Chat command callback functions.
     keyInput(event) {
     	var key = event.which || event.keyCode;
