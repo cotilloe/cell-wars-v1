@@ -14,6 +14,9 @@ class Canvas {
         this.cv.height = global.screenHeight;
         this.cv.addEventListener('mousemove', this.gameInput, false);
         this.cv.addEventListener('mouseout', this.outOfBounds, false);
+ // Adding to test mouse controls for split/eject - ref ~ line 122    -   9/15/2018
+        this.cv.addEventListener('mousedown', this.gameInput, false);
+ //end add 
         this.cv.addEventListener('keypress', this.keyInput, false);
         this.cv.addEventListener('keyup', function(event) {
             self.reenviar = true;
@@ -122,8 +125,7 @@ class Canvas {
     		this.parent.target.y = mouse.clientY - this.height / 2;
             global.target = this.parent.target;
     	}
-        // testing mouse button events 9/14/18 -gene
-    }
+     }
 
     touchInput(touch) {
         touch.preventDefault();
@@ -134,6 +136,25 @@ class Canvas {
             global.target = this.parent.target;
     	}
     }
+ // Mouse Testing    - 9/15/2018
+    $('#cvs').mousedown(function(event) {
+            var mouseSplit = global.KEY_SPLIT;
+            var mouseFire = global.KEY_FIREFOOD;
+            switch (event.which) {
+                case 1: 
+                    mouseSplit;
+                    break;
+                case 3:
+                    mouseFire;
+                    break;
+            }
+    }
+// Prevent default right click on mouse  -  9/15/2018
+    $(function() {
+            $(this).bind("contextmenu", function(e) {
+                e.preventDefault();
+            });
+        }); 
 
     // Chat command callback functions.
     keyInput(event) {
