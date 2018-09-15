@@ -31,7 +31,7 @@ class Canvas {
     }
     
 // function called when mouse buttons are clicked
-    mouseClick(event) {
+ /*   mouseClick(event) {
     	var click = event.which;
     	if (click === 1 && this.parent.reenviar) {
             this.parent.socket.emit('1');
@@ -47,7 +47,7 @@ class Canvas {
         }
     }
 }
-    
+ */   
     // Function called when a key is pressed, will change direction if arrow key.
     directionDown(event) {
     	var key = event.which || event.keyCode;
