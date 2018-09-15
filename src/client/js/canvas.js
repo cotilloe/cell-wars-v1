@@ -22,44 +22,10 @@ class Canvas {
         this.cv.addEventListener('keydown', this.directionDown, false);
         this.cv.addEventListener('touchstart', this.touchInput, false);
         this.cv.addEventListener('touchmove', this.touchInput, false);
-        // added event listener for mousedown
-        /*
-        this.cv.addEventListener("mousedown", function(event) {
-            self.reenviar = true;
-            self.mouseBind(event);
-        }, false);
-        */
-        // end listener
+        
         this.cv.parent = self;
         global.canvas = this;
     }
-// Mouse key binding START -----------
-  /*
-
-    mouseBind(event) {
-        var feeddown = global.KEY_FIREFOOD;
-        var feedup = global.KEY_FIREFOOD;
-        var splitdown = global.KEY_SPLIT;
-        var splitup = global.KEY_SPLIT;
-        $(document).bind('mousedown', function(e) {
-            if( (e.which == 3) ){
-                $('cvs').trigger(feeddown);
-                $('cvs').trigger(feedup);
-                //console.log("feed");
-            }
-            else if( (e.which == 1) ){
-                $('cvs').trigger(splitdown);
-                $('cvs').trigger(splitup);
-                //console.log("split");
-            }
-        }).bind('contextmenu', function(e){
-            e.preventDefault();
-        });
-        //alert("mouse enabled");
-    }
-)();
-*/
-// Mouse key binding END --------    
     
     // Function called when a key is pressed, will change direction if arrow key.
     directionDown(event) {
@@ -156,6 +122,7 @@ class Canvas {
     		this.parent.target.y = mouse.clientY - this.height / 2;
             global.target = this.parent.target;
     	}
+        // testing mouse button events 9/14/18 -gene
     }
 
     touchInput(touch) {
