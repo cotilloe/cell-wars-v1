@@ -15,7 +15,7 @@ class Canvas {
         this.cv.addEventListener('mousemove', this.gameInput, false);
         this.cv.addEventListener('mouseout', this.outOfBounds, false);
  // Adding to test mouse controls for split/eject - ref ~ line 122    -   9/15/2018
-        this.cv.addEventListener('mousedown', this.gameInput, false);
+        this.cv.addEventListener('mousedown', this.mouseClick, false);
  //end add 
         this.cv.addEventListener('keypress', this.keyInput, false);
         this.cv.addEventListener('keyup', function(event) {
@@ -29,6 +29,24 @@ class Canvas {
         this.cv.parent = self;
         global.canvas = this;
     }
+    
+// function called when mouse buttons are clicked
+    mouseClick(event) {
+    	var click = event.which;
+    	if (click === 1 && this.parent.reenviar) {
+            this.parent.socket.emit('1');
+            this.parent.reenviar = false;
+        }
+        else if (click === 3 && this.parent.reenviar) {
+            document.getElementById('split_cell').play();
+            this.parent.socket.emit('2');
+            this.parent.reenviar = false;
+        }
+        else if (click === 2) {
+            document.getElementById('chatInput').focus();
+        }
+    }
+}
     
     // Function called when a key is pressed, will change direction if arrow key.
     directionDown(event) {
