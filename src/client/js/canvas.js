@@ -30,24 +30,6 @@ class Canvas {
         global.canvas = this;
     }
     
-// function called when mouse buttons are clicked
- /*   mouseClick(event) {
-    	var click = event.which;
-    	if (click === 1 && this.parent.reenviar) {
-            this.parent.socket.emit('1');
-            this.parent.reenviar = false;
-        }
-        else if (click === 3 && this.parent.reenviar) {
-            document.getElementById('split_cell').play();
-            this.parent.socket.emit('2');
-            this.parent.reenviar = false;
-        }
-        else if (click === 2) {
-            document.getElementById('chatInput').focus();
-        }
-    }
-}
- */   
     // Function called when a key is pressed, will change direction if arrow key.
     directionDown(event) {
     	var key = event.which || event.keyCode;
@@ -175,11 +157,11 @@ class Canvas {
     // Split/feed on mouse click
     mouseClick(event) {
     	var click = event.which;
-    	if (click === 3 && this.parent.reenviar) {
+    	if (click == 3 && this.parent.reenviar) {
             this.parent.socket.emit('1');
             this.parent.reenviar = false;
                     }
-        else if (click === 1 && this.parent.reenviar) {
+        else if (click == 1 && this.parent.reenviar) {
             document.getElementById('split_cell').play();
             this.parent.socket.emit('2');
             this.parent.reenviar = false;
