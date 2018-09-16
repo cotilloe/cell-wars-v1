@@ -163,7 +163,7 @@ $( "#gameAreaWrap" ).click(function()  {
         socket.emit('2');
         window.canvas.reenviar = false;
     }
-}
+});
 
 // socket stuff.
 function setupSocket(socket) {
