@@ -153,7 +153,7 @@ $( "#split" ).click(function() {
     window.canvas.reenviar = false;
 });
 
-$( "#gameAreaWrap" ).click(function()  {
+$( "#gameAreaWrapper" ).click(function()  {
     var action = event.which;
     if(action == 3) {
         socket.emit('1');
