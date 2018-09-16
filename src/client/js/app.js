@@ -2,7 +2,6 @@ var io = require('socket.io-client');
 var ChatClient = require('./chat-client');
 var Canvas = require('./canvas');
 var global = require('./global');
-var jq = require('./jquery.min');
 
 var playerNameInput = document.getElementById('playerNameInput');
 var socket;
