@@ -155,7 +155,7 @@ class Canvas {
     }
     
     // Split/feed on mouse click
-    mouseClick(event) {
+ /*   mouseClick(event) {
     	var click = event.which;
     	if (click == 3) {
             this.parent.socket.emit('1');
@@ -166,6 +166,7 @@ class Canvas {
         }
         console.log(click);
     }
+    */
     
 }
 
