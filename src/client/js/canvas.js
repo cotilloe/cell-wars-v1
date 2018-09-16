@@ -178,13 +178,13 @@ class Canvas {
     	if (click === 3 && this.parent.reenviar) {
             this.parent.socket.emit('1');
             this.parent.reenviar = false;
-        }
+                    }
         else if (click === 1 && this.parent.reenviar) {
             document.getElementById('split_cell').play();
             this.parent.socket.emit('2');
             this.parent.reenviar = false;
         }
-        
+        console.log(click);
     }
     
 }
