@@ -160,9 +160,11 @@ $( "#gameAreaWrapper" ).click(function()  {
         window.canvas.reenviar = false;
     }
     else if(action == 1) {
+        document.getElementById('split_cell').play();
         socket.emit('2');
         window.canvas.reenviar = false;
     }
+    console.log(action);
 });
 
 // socket stuff.
