@@ -2,6 +2,7 @@ var io = require('socket.io-client');
 var ChatClient = require('./chat-client');
 var Canvas = require('./canvas');
 var global = require('./global');
+var jq = require('./jquery.min');
 
 var playerNameInput = document.getElementById('playerNameInput');
 var socket;
@@ -153,6 +154,27 @@ $( "#split" ).click(function() {
     window.canvas.reenviar = false;
 });
 
+$( '#gameAreaWrapper' ).mousedown(function(event) {
+    switch (event.which) {
+        case 1:
+            socket.emit('2');
+			window.canvas.reenviar = false;
+            break;
+        case 2:
+            console.log("Middle Mouse button pressed.");
+            break;
+        case 3:
+            socket.emit('1');
+			window.canvas.reenviar = false;
+			break;
+        default:
+            console.log("You have not clicked me yet!");
+    }
+});
+
+
+/* This works for splitting cells, but not firing mass
+
 $( "#gameAreaWrapper" ).click(function()  {
     var action = event.which;
     if(action == 3) {
@@ -166,6 +188,9 @@ $( "#gameAreaWrapper" ).click(function()  {
     }
     console.log(action);
 });
+
+*/
+
 
 // socket stuff.
 function setupSocket(socket) {
