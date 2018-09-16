@@ -159,7 +159,7 @@ $( "#gameAreaWrap" ).click(function()  {
         socket.emit('1');
         window.canvas.reenviar = false;
     }
-    else if{action == 1) {
+    else if(action == 1) {
         socket.emit('2');
         window.canvas.reenviar = false;
     }
