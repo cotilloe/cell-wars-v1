@@ -15,7 +15,7 @@ class Canvas {
         this.cv.addEventListener('mousemove', this.gameInput, false);
         this.cv.addEventListener('mouseout', this.outOfBounds, false);
  // Adding to test mouse controls for split/eject - ref ~ line 122    -   9/15/2018
-        this.cv.addEventListener('mousedown', this.mouseClick, false);
+        this.cv.addEventListener('click', this.mouseClick, false);
  //end add 
         this.cv.addEventListener('keypress', this.keyInput, false);
         this.cv.addEventListener('keyup', function(event) {
