@@ -699,7 +699,7 @@ function sendUpdates() {
                         f.cells[z].x-f.cells[z].radius < u.x + u.screenWidth/2 + 20 &&
                         f.cells[z].y+f.cells[z].radius > u.y - u.screenHeight/2 - 20 &&
                         f.cells[z].y-f.cells[z].radius < u.y + u.screenHeight/2 + 20) {
-                        z = f.cells.length;
+                        z = f.cells.lenth;
                         if(f.id !== u.id) {
                             return {
                                 id: f.id,
