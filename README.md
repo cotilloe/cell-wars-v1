@@ -85,7 +85,8 @@ The game will then be accessible at `http://localhost:3000` or the respective se
   Of course! As long as your client supports WebSockets, you can write your game client in any language/technology, even with Unity3D if you want (there is an open source library for Unity to communicate with WebSockets)!
   
 ### TODO
-Here is an example video taken from Chopcoin.io to show what I am trying to achieve: (https://github.com/cotilloe/cell-wars-v1/master/exampleGamePlay.webm) and here is a list of the items I still have not gotten done yet. Always open to new ideas and suggestions too!
+Here is an example video taken from Chopcoin.io to show what I am trying to achieve: 
+(https://github.com/cotilloe/cell-wars-v1/blob/master/exampleGamePlay.mp4) and here is a list of the items I still have not gotten done yet. Always open to new ideas and suggestions too!
 <ol>
     <li>Need to make eating other players and Cell Rejoining a more smoother action. As of now, once a cell "covers" another cell enough         for it to trigger an "absorb" action, it "pops". A smoother transition is needed. (For example, see https://chopcoin.io)</li>
     <li>Implement skins feature. Skins will be simple graphics that will fit on a players cell, rowing with it and also apparing on             every cell when a player splits. Skins should be 1 color, more like a sillouhette, for network lag consideration. (For example,         see https://chopcoin.io)</li>
