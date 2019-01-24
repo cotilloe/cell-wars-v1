@@ -3,6 +3,7 @@ Cell Wars
 **Built using huytd's source**
 
 A simple but powerful Agar.IO clone built with socket.IO and HTML5 canvas on top of NodeJS.
+Check it out. This is the In development game in action: https://cryptosis.herokuapp.com/
 
 ---
 
