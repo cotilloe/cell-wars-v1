@@ -6,16 +6,16 @@ A simple but powerful Agar.IO clone built with socket.IO and HTML5 canvas on top
 
 ---
 
-## How to Play
-You can check out how to play on our [wiki](https://github.com/huytd/agar.io-clone/wiki/How-to-Play).
+**How to Play**
+Players start as small round "Cells". The object of the game is to gain mass by eating pellts and other players. As a cell passes over another cell or pellet, the larger of the two will absorb, or eat, the smaller and gain the mass of the aten pellet or cell. 
 
-#### Game Basics
+**Game Basics**
 - Move your mouse around the screen to move your cell.
 - Eat food and other players in order to grow your character (food respawns every time a player eats it).
-- A player's **mass** is the number of food particles eaten.
+- A player's **mass** is the mass gained from players & food particles eaten.
 - **Objective**: Try to get as big as possible and eat other players.
 
-#### Gameplay Rules
+**Gameplay Rules**
 - Players who haven't eaten yet cannot be eaten as a sort of "grace" period. This invincibility fades once they gain mass.
 - Everytime a player joins the game, **3** food particles will spawn.
 - Everytime a food particle is eaten by a player, **1** new food particle will respawn.
@@ -23,7 +23,7 @@ You can check out how to play on our [wiki](https://github.com/huytd/agar.io-clo
 
 ---
 
-## Latest Changes
+**Latest Changes**
 - Game logic is handled by the server
 - The client side is for rendering of the canvas and it's items only.
 - Mobile optimisation.
@@ -31,65 +31,49 @@ You can check out how to play on our [wiki](https://github.com/huytd/agar.io-clo
 - Display player name.
 - Now supporting chat. 
 - Type`-ping` in the chatbox to check your ping, as well as other commands!
-
+- Left clicking your mouse will "Split" your cell into multiple pieces
+- Right clicking your mouse will eject a small amount of mass
 ---
 
-## Installation
-You can simply click one of the buttons below to easily deploy this repo to Bluemix or Heroku:
+**Installation**
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/huytd/agar.io-clone)
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-Or...
-
->You can check out a more detailed setup tutorial on our [wiki](https://github.com/huytd/agar.io-clone/wiki/Setup).
-
-#### Requirements
+**Requirements**
 To run / install this game, you'll need: 
 - NodeJS with NPM installed.
 - socket.IO.
 - Express.
 
 
-#### Downloading the dependencies
+**Downloading the dependencies**
 After cloning the source code from Github, you need to run the following command to download all the dependencies (socket.IO, express, etc.):
 
 ```
 npm install
 ```
 
-#### Running the Server
+**Running the Server**
 After downloading all the dependencies, you can run the server with the following command:
 
 ```
 npm start
 ```
 
-The game will then be accessible at `http://localhost:3000` or the respective server installed on. The default port is `3000`, however this can be changed in config. Further elaboration is available on our [wiki](https://github.com/huytd/agar.io-clone/wiki/Setup).
-
-
-### Running the Server with Docker
-If you have [Docker](https://www.docker.com/) installed, after cloning the repository you can run the following commands to start the server and make it acessible at `http://localhost:3000`:
-
-```
-docker build -t agarioclone_agar .
-docker run -it -p 3000:3000 agarioclone_agar
-```
+The game will then be accessible at `http://localhost:3000` or the respective server installed on. The default port is `3000`, however this can be changed in config. 
 
 ---
 
-## FAQ
+**FAQ**
 1. **What is this game?**
 
-  This is a clone of the game [Agar.IO](http://agar.io/). Someone said that Agar.IO is a clone of an iPad game called Osmos, but we haven't tried it yet. (Cloneception? :P)
+  This is a clone of the game [Agar.IO](http://agar.io/). 
   
 2. **Why would you make a clone of this game?**
 
-  Well, while the original game is still online, it is closed-source, and sometimes, it suffers from massive lag. That's why we want to make an open source version of it: for educational purposes, and to let the community add the features that they want, self-host it on their own servers, have fun with friends and more.
+  Well, while the original game is still online, it is closed-source, and always suffers from massive lag. I want to make an open source version of it: for educational purposes, and to let the community add the features that they want, self-host it on their own servers, have fun with friends and more.
   
 3. **Any plans on adding an online server to compete with Agar.IO or making money out of it?**
 
-  No. This game belongs to the open-source community, and we have no plans on making money out of it nor competing with anything. But you can of course create your own public server, let us know if you do so and we can add it to our Live Demos list!
+ Possibly, but either way, this version of the game belongs to the open-source community, and it will remain open-source, even if commercial plans come into play for myself, personally. 
   
 4. **Can I deploy this game to my own server?**
 
@@ -99,19 +83,14 @@ docker run -it -p 3000:3000 agarioclone_agar
 
   Of course! As long as your client supports WebSockets, you can write your game client in any language/technology, even with Unity3D if you want (there is an open source library for Unity to communicate with WebSockets)!
   
-6. **Can I use some code of this project on my own?**
-
-  Yes you can.
-
-## For Developers
- - [Game Architecture](https://github.com/huytd/agar.io-clone/wiki/Game-Architecture) to understand how the backend works.
- - If you want to start your own project, I recommend you use [this template](https://github.com/huytd/node-online-game-template). Happy developing!
- -
-
-## TODOs
- We have an explicit [TODO](https://github.com/huytd/agar.io-clone/wiki/Coming-Features) list for the all the features we aim to develop in the future. Feel free to contribute, we'll be more than grateful.
-
-## License
->You can check out the full license [here](https://github.com/huytd/agar.io-clone/blob/master/LICENSE).
-
+**TODO**
+Here is an example video taken from Chopcoin.io to sho what I am trying to achieve and here is a list of the items I still have not gotten done yet. Always open to new ideas and suggestions too!
+<ol>
+    <li>Need to make eating other players and Cell Rejoining a more smoother action. As of now, once a cell "covers" another cell enough         for it to trigger an "absorb" action, it "pops". A smoother transition is needed. (For example, see https://chopcoin.io)</li>
+    <li>Implement skins feature. Skins will be simple graphics that will fit on a players cell, rowing with it and also apparing on             every cell when a player splits. Skins should be 1 color, more like a sillouhette, for network lag consideration. (For example,         see https://chopcoin.io)</li>
+    <li>Bombs. Currently, the bombs that cause players to explode into mmultiple smaller pieces when a player hits them, are drawn onto         the canvas as larger, non-moving circles. Need to change them to a sprite. Also, a player should be able to eject mass and if           mass hits the bombs , it should cause a new bomb to spwan from the original bomb with accelreation away from the original bomb.         This allows players to "shoot" other players with bombs essentially. Finally, if a player is split into th max number of pieces         allowed, absorbing a bomb smaller than the cell should cause the cell to gain the bombs mass, which should be set to 4 times its         actual size. </li>
+    <li>Create different game modes. </li>
+    <li>Improve front end ui</li>
+ </ol>
+**License**
 This project is licensed under the terms of the **MIT** license.
