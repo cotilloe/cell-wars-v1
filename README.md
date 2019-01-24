@@ -6,16 +6,16 @@ A simple but powerful Agar.IO clone built with socket.IO and HTML5 canvas on top
 
 ---
 
-**How to Play**
+### How to Play
 Players start as small round "Cells". The object of the game is to gain mass by eating pellts and other players. As a cell passes over another cell or pellet, the larger of the two will absorb, or eat, the smaller and gain the mass of the aten pellet or cell. 
 
-**Game Basics**
+### Game Basics
 - Move your mouse around the screen to move your cell.
 - Eat food and other players in order to grow your character (food respawns every time a player eats it).
 - A player's **mass** is the mass gained from players & food particles eaten.
 - **Objective**: Try to get as big as possible and eat other players.
 
-**Gameplay Rules**
+### Gameplay Rules
 - Players who haven't eaten yet cannot be eaten as a sort of "grace" period. This invincibility fades once they gain mass.
 - Everytime a player joins the game, **3** food particles will spawn.
 - Everytime a food particle is eaten by a player, **1** new food particle will respawn.
@@ -23,7 +23,7 @@ Players start as small round "Cells". The object of the game is to gain mass by 
 
 ---
 
-**Latest Changes**
+### Latest Changes
 - Game logic is handled by the server
 - The client side is for rendering of the canvas and it's items only.
 - Mobile optimisation.
@@ -35,7 +35,7 @@ Players start as small round "Cells". The object of the game is to gain mass by 
 - Right clicking your mouse will eject a small amount of mass
 ---
 
-**Installation**
+### Installation
 
 **Requirements**
 To run / install this game, you'll need: 
@@ -62,7 +62,7 @@ The game will then be accessible at `http://localhost:3000` or the respective se
 
 ---
 
-**FAQ**
+### FAQ
 1. **What is this game?**
 
   This is a clone of the game [Agar.IO](http://agar.io/). 
@@ -83,8 +83,8 @@ The game will then be accessible at `http://localhost:3000` or the respective se
 
   Of course! As long as your client supports WebSockets, you can write your game client in any language/technology, even with Unity3D if you want (there is an open source library for Unity to communicate with WebSockets)!
   
-**TODO**
-Here is an example video taken from Chopcoin.io to sho what I am trying to achieve and here is a list of the items I still have not gotten done yet. Always open to new ideas and suggestions too!
+### TODO
+Here is an example video taken from Chopcoin.io to show what I am trying to achieve: (https://github.com/cotilloe/cell-wars-v1/master/exampleGamePlay.webm) and here is a list of the items I still have not gotten done yet. Always open to new ideas and suggestions too!
 <ol>
     <li>Need to make eating other players and Cell Rejoining a more smoother action. As of now, once a cell "covers" another cell enough         for it to trigger an "absorb" action, it "pops". A smoother transition is needed. (For example, see https://chopcoin.io)</li>
     <li>Implement skins feature. Skins will be simple graphics that will fit on a players cell, rowing with it and also apparing on             every cell when a player splits. Skins should be 1 color, more like a sillouhette, for network lag consideration. (For example,         see https://chopcoin.io)</li>
@@ -92,5 +92,6 @@ Here is an example video taken from Chopcoin.io to sho what I am trying to achie
     <li>Create different game modes. </li>
     <li>Improve front end ui</li>
  </ol>
-**License**
+ 
+### License
 This project is licensed under the terms of the **MIT** license.
