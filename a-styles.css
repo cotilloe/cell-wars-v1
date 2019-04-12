@@ -1,0 +1,239 @@
+li.a { 
+  display:inline;
+  padding: 3px; 
+}
+
+header	{
+		background-image: url(ClintonLake.jpg);
+		background-position: center; /* Center the image */
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.blue	{
+	color:#08088A;
+}
+
+.blue-bg	{
+		background-color: #08088A;
+}
+
+.purple	{
+	color: #8A0886;
+	font-weight:bold;
+	text-shadow: 2px 2px white;
+}
+
+.purple-bg	{
+	background-color: #8A0886;
+}
+
+
+.top{
+	position:fixed;
+	width:100%;
+	z-index:1
+}
+
+.top{top:0}
+.bar{
+  width:100%;
+  overflow:hidden
+  padding:8px 16px;
+  float:left;
+  width:auto;
+  border:none; 
+  display:block;
+  outline:0
+
+}
+
+.bar:before,.w3-bar:after {
+  content:"";
+  display:table;
+  clear:both
+}
+
+.bar-block  {
+  width:100%;
+  display:block;
+  padding:8px 16px;
+  text-align:left;
+  border:none;
+  white-space:normal;
+  float:none;
+  min-width:100%;
+  outline:0;
+  padding:8px 16px
+}
+
+.bar-item  {
+  width:100%;
+  display:inline;
+  padding:0px 0px;
+  text-align:left;
+  border:none;
+  white-space:normal;
+  float:none;
+  min-width:100%;
+  outline:0;
+}
+
+.black  {
+  color:#fff!important;background-color:#000!important
+}
+
+.button  {
+  font:inherit;
+  margin:0;
+  border:none;
+  padding:0;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  background-color:red;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap
+}
+
+.button{
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+
+.button:disabled{cursor:not-allowed;opacity:0.3}
+
+.button{white-space:normal}
+
+.button:hover{color:#000!important;background-color:#ccc!important}
+
+.card  {
+  box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+
+.center  {
+  text-align:center
+}
+
+.container  {
+  padding:0.01em 16px
+}
+
+container:after,.container:before  {
+content:"";
+display:table;
+clear:both
+}
+
+.content  {
+  margin-left:auto;
+  margin-right:auto;
+  min-width:980px
+}
+
+.hide  {
+  display:none!important;
+
+}
+
+
+/*.hide-medium  {
+  display:none!important;
+}
+
+.hide-large  {
+  display:none!important;
+}
+*/
+.hover-opacity:hover{
+  opacity:0.60
+}
+
+.hover-white  {
+  color:#000!important;
+  background-color:#fff!important
+}
+
+.left-align  {
+  text-align:left!important
+}
+
+.large  {
+  font-size:18px!important
+}
+
+.margin-right  {
+  margin-right:16px!important
+}
+
+.margin-top  {
+  margin-top:16px!important
+}
+
+.opacity  {
+  opacity:0.60
+}
+
+.padding-32  {
+  padding-top:32px!important;
+  padding-bottom:32px!important
+}
+
+.padding-64  {
+  padding-top:64px!important;
+  padding-bottom:64px!important
+}
+
+.padding-large  {
+  padding:12px 24px!important
+}
+
+.red  {
+  color:#fff!important;
+  background-color:#f44336!important
+}
+
+.right  {
+  float:right!important
+}
+
+.row-padding  {
+  padding:0 8px
+}
+
+row-padding:after,.row-padding:before  {
+  content:"";display:table;clear:both
+}
+
+.text-grey  {
+  color:#757575!important
+}
+
+.text-red  {
+  color:#f44336!important
+}
+
+.third  {
+  float:left;
+  width:100%;
+  padding:0 8px
+}
+
+.twothird  {
+  float:left;
+  width:100%;
+  padding:0 8px
+}
+
+.white  {
+  color:#000!important;
+  background-color:#fff!important
+}
+
+.xlarge  {
+  font-size:24px!important
+}

@@ -1,0 +1,33 @@
+/*styles.css*/
+
+body,h1,h2,h3,h4,h5,h6 {
+	font-family: "Lato", sans-serif
+}
+
+body{
+	background-color: lightgray;
+    padding: 4% 6%;
+}
+
+.logo, .copyright {
+	position: relative;
+    float: left;
+}
+
+.navbar {
+	position: relative;
+    float: left;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    padding: 20% 10%;
+}
+
+.main-content:before, .main-content:after {
+    clear: both;
+}
+
